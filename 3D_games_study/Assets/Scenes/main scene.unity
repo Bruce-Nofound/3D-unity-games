@@ -779,7 +779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aee9c24566a4bbb4fa90c531e3483bf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CameraDiraction: {fileID: 85862034}
+  CameraDiraction: {fileID: 85862029}
   rotationSpeed: 10
 --- !u!1 &660448444
 GameObject:
