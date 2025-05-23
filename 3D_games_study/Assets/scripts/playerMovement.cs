@@ -7,12 +7,16 @@ public class playerMovement : MonoBehaviour
 {
     public GameObject CameraDiraction;
     public Animator anim;
+    public Rigidbody rb;
     public float rotationSpeed = 10f;
     public Dictionary<string, string> NinjiaAttack;
     public string mudra;
+    public float moveSpeed;
+    public float MaxSpeed;
     void Start()
     {
         CameraDiraction = GameObject.FindWithTag("MainCamera");
+        rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
         NinjiaAttack = new Dictionary<string, string>()
         {
@@ -24,6 +28,7 @@ public class playerMovement : MonoBehaviour
     void Update()
     {
         FollowCameraDiraction();
+        结印();
     }
     IEnumerator WaitForSeconds(float seconds)
     {
@@ -34,13 +39,25 @@ public class playerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             WaitForSeconds(0.1f);
-            while (transform.eulerAngles.y != CameraDiraction.transform.eulerAngles.y)
+            float newY = Mathf.LerpAngle(transform.eulerAngles.y, CameraDiraction.transform.eulerAngles.y, rotationSpeed * Time.deltaTime);
+            transform.rotation = Quaternion.Euler(0f, newY, 0f);
+            Debug.Log(CameraDiraction.transform.rotation);
+            WaitForSeconds(Time.deltaTime);
+        }
+        if (Input.GetKey(KeyCode.W))
+        {
+            while (Input.GetKey(KeyCode.W))
             {
-                float newY = Mathf.LerpAngle(transform.eulerAngles.y, CameraDiraction.transform.eulerAngles.y, rotationSpeed * Time.deltaTime);
-                transform.rotation = Quaternion.Euler(0f, newY, 0f);
-                Debug.Log(CameraDiraction.transform.rotation);
-                WaitForSeconds(Time.deltaTime);
+                if (rb.linearVelocity.magnitude < MaxSpeed)
+                {
+                    rb.AddForce(transform.forward * moveSpeed, ForceMode.Force);
+                }
+
             }
+        }
+        else
+        {
+            rb.linearVelocity = Vector3.zero;
         }
     }
     public void 结印()
