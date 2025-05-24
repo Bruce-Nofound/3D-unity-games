@@ -13,6 +13,7 @@ public class playerMovement : MonoBehaviour
     public string mudra;
     public float moveSpeed;
     public float MaxSpeed;
+    public Vector3 MovementInput;
     void Start()
     {
         CameraDiraction = GameObject.FindWithTag("MainCamera");
@@ -46,14 +47,8 @@ public class playerMovement : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.W))
         {
-            while (Input.GetKey(KeyCode.W))
-            {
-                if (rb.linearVelocity.magnitude < MaxSpeed)
-                {
-                    rb.AddForce(transform.forward * moveSpeed, ForceMode.Force);
-                }
-
-            }
+            MovementInput.x = Input.GetAxis("Horizontal");
+            MovementInput.z = Input.GetAxis("Vertical");
         }
         else
         {
