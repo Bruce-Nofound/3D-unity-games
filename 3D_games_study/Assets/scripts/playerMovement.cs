@@ -42,11 +42,11 @@ public class playerMovement : MonoBehaviour
     }
     public void FollowCameraDiraction()
     {
-        Vector3 veiwDiraction = player.position - new Vector3(transform.position.x, player.position.y, transform.position.z);
+        Vector3 veiwDiraction = player.position;
         orientation.forward = veiwDiraction.normalized;
         float Xinput = Input.GetAxis("Horizontal");
         float Zinput = Input.GetAxis("Vertical");
-        Vector3 inputDir = orientation.forward * Zinput + orientation.right * Xinput;
+        Vector3 inputDir = orientation.forward * Zinput + orientation.right*Xinput;
         if (inputDir != Vector3.zero)
         {
             player.forward = Vector3.Slerp(transform.forward, inputDir, rotationSpeed * Time.deltaTime);
