@@ -563,8 +563,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 175630818}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0121339895, y: -0.5494692, z: -0.007980984, w: 0.8353878}
-  m_LocalPosition: {x: 0.0000019073485, y: -7.1054274e-15, z: -0.0000000011040129}
+  m_LocalRotation: {x: -0.012133938, y: -0.5494692, z: -0.007980995, w: 0.8353878}
+  m_LocalPosition: {x: 0.0000019067967, y: -7.1054274e-15, z: -0.0000009547782}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -642,8 +642,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 413592733}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.027287096, y: -0.5492339, z: -0.017947832, w: 0.83503026}
-  m_LocalPosition: {x: 0.0000019073485, y: -7.1054274e-15, z: -0.0000000011040129}
+  m_LocalRotation: {x: -0.027287098, y: -0.549234, z: -0.017947856, w: 0.8350302}
+  m_LocalPosition: {x: 0.0000019067967, y: -7.1054274e-15, z: -0.0000009547782}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -813,6 +813,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CameraTransform: {fileID: 85862034}
+  rotationSpeed: 0
 --- !u!1 &660448444
 GameObject:
   m_ObjectHideFlags: 3
@@ -1558,7 +1559,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1873287877}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0030633176, y: -0.5495234, z: 0.0020148468, w: 0.8354704}
+  m_LocalRotation: {x: 0.0030633477, y: -0.5495234, z: 0.0020148898, w: 0.8354703}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
