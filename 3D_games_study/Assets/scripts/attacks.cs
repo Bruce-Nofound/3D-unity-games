@@ -14,7 +14,7 @@ public class attacks : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        结印();
     }
     public void 结印()
     {
@@ -23,7 +23,7 @@ public class attacks : MonoBehaviour
             mudra = "";
             while (Input.GetKeyDown(KeyCode.Q) == false)
             {
-                if (Input.GetKey(KeyCode.Alpha1))
+                if (Input.GetKey(KeyCode.U))
                 {
                     mudra = mudra + "子";
                     Debug.Log("子");
@@ -40,7 +40,15 @@ public class attacks : MonoBehaviour
                 {
                     mudra = mudra + "卯";
                 }
-                if (Input.GetKey(KeyCode.Semicolon))
+                if (Input.GetKey(KeyCode.J))
+                {
+                    mudra = mudra + "丑";
+                }
+                if (Input.GetKey(KeyCode.K))
+                {
+                    mudra = mudra + "丑";
+                }
+                if (Input.GetKey(KeyCode.L))
                 {
                     mudra = mudra + "丑";
                 }
